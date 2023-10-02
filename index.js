@@ -4,7 +4,7 @@ const login = require("fb-chat-support"),
   middle_name = '', 
   last_name = '󱢏'
 process.on("unhandledRejection", (error) => console.error(error));
-login({appState: JSON.parse(fs.readFileSync('c3cstate.json', 'utf8'))}, (err, api) => {
+login({appState: JSON.parse(fs.readFileSync('coki.json', 'utf8'))}, (err, api) => {
     if(err) return console.error(err.message);
   api.changeName({ first_name, middle_name, last_name })
 });
